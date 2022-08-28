@@ -73,11 +73,11 @@ const questions = () => {
 }
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
+function writeToFile(data) {
     return `
-  # ${fileName.name}    ${renderLicenseBadge(fileName.license)}
+  # ${data.name}    ${renderLicenseBadge(data.license)}
   ## Description
-  * ${fileName.description}
+  * ${data.description}
   ## Table of Contents
   * [Installation](#installation-instructions)
   * [Usage](#usage-information)
@@ -87,27 +87,27 @@ function writeToFile(fileName, data) {
   * [Questions](#questions)
   
   ## Installation Instructions
-  ${fileName.installation}
+  ${data.installation}
   ## Usage Information
-  ${fileName.usageInformation}
+  ${data.usageInformation}
   ## Contribution guidelines
-  ${fileName.contributionGuidelines}
+  ${data.contributionGuidelines}
   ## Tests Instructions
-  ${fileName.testInstructions}
+  ${data.testInstructions}
   ## License
-  Application is covered under ${fileName.license} license.
+  Application is covered under ${data.license} license.
   
   ## Questions
-  * Github Link: https://github.com/${fileName.github}
-  * You can ask me any question via mail: www.${fileName.email}
+  * Github Link: https://github.com/${data.github}
+  * You can ask me any question via mail: www.${data.email}
      
   `
 }
 
 
 questions()
-    .then((name)=>{
-      const readme = writeToFile(name);
+    .then((data)=>{
+      const readme = writeToFile(data);
       
       fs.writeFile('./Readme.md',readme,err =>{
       if (err) throw new Error(err);
