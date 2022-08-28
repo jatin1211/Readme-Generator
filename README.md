@@ -11,7 +11,7 @@
 
 ## https://drive.google.com/file/d/1Cndc-BSnuEhXCWyXZnnJc5CrsXYPZf9X/view
 
-<img src= './develop/images/Capture1.jpg' alt='image' width= '500' height = '500'>
+<img src= './Develop/images/Capture1.jpg' alt='image' width= '500' height = '500'>
 
 
 
